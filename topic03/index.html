@@ -1,0 +1,166 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/solarized_light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.js"></script>
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.credits
+{
+  min-height:20px;
+}
+    </style>
+
+  </head>
+
+  <body>
+
+  <div class="ui container">
+  <header class="ui middle aligned center aligned stackable grid segment">
+    <div class="eight wide  column">
+      <h2> Play Skeleton Project </h2>
+      <!--<h3> () </h3>-->
+    </div>
+    <div class="one wide column sitemap">
+      <div class="popup" data-content="Top Level Topic View">
+        <a href="../index.html"> <i class="big sitemap icon"></i></a>
+        topics
+      </div>
+    </div>
+    <div class="one wide column">
+      <div class="popup" data-content="All Presentations">
+        <a href="../talkwall.html"> <i class="big film icon"></i></a>
+        slides
+      </div>
+    </div>
+    <div class="one wide column">
+      <div class="popup" data-content="All Labs">
+        <a href="../labwall.html"> <i class="big lab icon"></i></a>
+        labs
+      </div>
+    </div>
+    <div class="five wide column">
+      <img class="ui centered medium image" src="http://www.wit.ie/assets/images/wit_crest.png">
+    </div>
+  </header>
+
+<script>
+  $('.popup')
+  .popup()
+;
+</script>
+
+
+<div class="ui four doubling stackable cards">
+      <a class="ui card" href="./talk-2-starting-to-play/b-starting-to-play.pdf">
+    <div class="content">
+      <div class="right floated meta"> <i class="film large icon"></i></div>
+      <div class="header"> Starting to Play </div>
+    </div>
+    <div class="ui bordered rounded image">
+      <img src="./talk-2-starting-to-play/b-starting-to-play.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>To build a web application we need a web framework. This will define the superstructure of our application and provide essential features to enable us to compose a complicated and efficient web application</p>
+      </div>
+    </div>
+  </a>
+
+      <a class="ui card" href="./talk-play-skeleton/c-spacebook-skeleton.pdf">
+    <div class="content">
+      <div class="right floated meta"> <i class="film large icon"></i></div>
+      <div class="header"> Spacebook Skeleton </div>
+    </div>
+    <div class="ui bordered rounded image">
+      <img src="./talk-play-skeleton/c-spacebook-skeleton.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>This is the starter web application you will build in this weeks lab. It will always have a very specific structure coupled with a tightly controller life cycle for handing requests.</p>
+      </div>
+    </div>
+  </a>
+
+      <a class="ui card" href="book-play-skeleton/index.html">
+    <div class="content">
+      <div class="right floated meta"> <i class="lab large icon"></i></div>
+      <div class="header"> Lab-03 </div>
+    </div>
+    <div class="ui bordered rounded image">
+      <img src="./book-play-skeleton/img/main.png">
+    </div>
+    <div class="content">
+      <div class="description">
+         <p>Move the Spacebook application from the static site into the structure provide by the Play framework. This will require installation of the framework, creation of a starter project and incorporation of the work we have already completed in the last lab.</p>
+      </div>
+    </div>
+  </a>
+
+  </div>
+   </div>
+
+
+
+  <br><br>
+  <div class="ui bottom fixed borderless menu">
+    <div class="ui small item">
+    <p id="footertext">
+    Prepared by  Eamonn de Leastar (edeleastar@wit.ie). Except where otherwise noted, this content is licensed under a
+     <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+       target="_blank">Creative Commons Attribution-NonCommercial 4.0 License
+     </a>
+     </p>
+    </div>
+  </div>    <script>
+
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+})    </script>
+
+  </body>
+ </html>
