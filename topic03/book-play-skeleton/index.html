@@ -85,7 +85,7 @@ h3
   <header class="header item">
     <a href="../index.html">
       <i class="sitemap icon"></i>
-      Starting to Play
+      Play Skeleton Project
     </a>
   </header>
   <div class="right tab-menu menu">
@@ -268,13 +268,9 @@ public class Application extends Controller
 <p>We can start the process of making our site 'dynamic'. This means that the pages will be composed of multiple fragments, as opposed to the single 'static' pages we have been constructing to date.</p>
 <p>Look again at our static site, as we may have left it in an earlier lab:</p>
 <ul>
-<li><a href="archives/final/home.html">spacebook-semantic</a></li>
+<li><a href="archives/spacebook-semantic/home.html">spacebook-semantic</a></li>
 </ul>
-<p>Before we do that, however, parts of our site are already available, namely the 'semantic ui' framework files (css, js and image files). These can be directly copied over into our new project. They will reside in the 'public' folder.</p>
-<p>You should already have these files in the lab05-spacebook project, so copy and paste the 'semantic' folder directly into the public folder of the spacebook project (not drag and drop, as they will be deleted from the lab05-spacebook project).</p>
-<p>Aim to have the spacebook project looking like this:</p>
-<p><img alt="" src="img/26.png"></p>
-<p>The above change will require one further adjustment. Open the file 'app/views/main.html'. The first time you open this file, eclipse may have difficulty reading it, presenting this screen:</p>
+<p>Open the file 'app/views/main.html'. The first time you open this file, eclipse may have difficulty reading it, presenting this screen:</p>
 <p><img alt="" src="img/28.png"></p>
 <p>Select 'other' and then 'UTF-8' from the drop down:</p>
 <p><img alt="" src="img/29.png"></p>
@@ -301,26 +297,21 @@ public class Application extends Controller
 
 <p>Replace this complete contents with the following:</p>
 <pre><code>&lt;!DOCTYPE html&gt;
-
 &lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;#{get 'title' /}&lt;/title&gt;
-        &lt;meta charset=&quot;${_response_encoding}&quot;&gt;
-        &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;@{'/public/stylesheets/main.css'}&quot;&gt;
-        #{get 'moreStyles' /}
-        &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;@{'/public/images/favicon.png'}&quot;&gt;
-        &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;@{'/public/semantic/semantic.min.css'}&quot;&gt;        
-
-    &lt;/head&gt;
-    &lt;body&gt;
-      &lt;div class=&quot;ui segment&quot;&gt;
-        #{doLayout /}
-      &lt;/div&gt;  
-
-        &lt;script src=&quot;@{'/public/javascripts/jquery-1.6.4.min.js'}&quot; type=&quot;text/javascript&quot; charset=&quot;${_response_encoding}&quot;&gt;&lt;/script&gt;
-        &lt;script src=&quot;@{'/public/semantic/semantic.js'}&quot; type=&quot;text/javascript&quot; charset=&quot;${_response_encoding}&quot;&gt;&lt;/script&gt;
-        #{get 'moreScripts' /}
-    &lt;/body&gt;
+   &lt;head&gt;
+    &lt;title&gt;#{get 'title' /}&lt;/title&gt;
+    &lt;meta charset=&quot;${_response_encoding}&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css&quot;&gt;
+    &lt;script src=&quot;http://code.jquery.com/jquery-2.1.1.min.js&quot;&gt;&lt;/script&gt; 
+    &lt;script src=&quot;http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js&quot;&gt;&lt;/script&gt;          
+    &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;@{'/public/stylesheets/main.css'}&quot;&gt;
+    &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;@{'/public/images/favicon.png'}&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;section class=&quot;ui segment&quot;&gt;
+      #{doLayout /}
+    &lt;/section&gt;
+  &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
 
@@ -343,7 +334,7 @@ public class Application extends Controller
     <h1>Navbar</h1>
 <p>Reflect again on the site we have already built:</p>
 <ul>
-<li><a href="archives/final/home.html">lab05-spacebook</a></li>
+<li><a href="archives/spacebook-semantic/home.html">spacebook-semantic</a></li>
 </ul>
 <p>Instead of thinking of the site as a set of files on disk, currently structured thus in the 'static' project:</p>
 <p><img alt="" src="img/02a.png"></p>
