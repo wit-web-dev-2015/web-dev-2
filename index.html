@@ -83,50 +83,95 @@ figcaption
 
 <div class="ui four doubling stackable cards">
 
-    <a class="ui card" href="./topic01/index.html">
+    <div class="ui card">
     <div class="content">
-      <div class="right floated meta"> <i class="sitemap large icon"></i></div>
-      <div class="header"> Introducing Spacebook </div>
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Introducing Spacebook </div>
     </div>
-    <div class="ui bordered rounded image">
-      <img src="./topic01/topic.png">
-    </div>
+   <!-- <div class="ui bordered rounded image"> -->
+      <a class="ui card" href="./topic01/index.html">
+        <img class="ui image" src="./topic01/topic.png" height="200">
+      </a>
+   <!-- </div>-->
     <div class="content">
       <div class="description">
          <p>As we move from static web sites to dynamic web application, we will adopt a new case study called Spacebook. This is a mini social-network application, which we will progressively enhance in successive labs.</p>
       </div>
     </div>
-  </a>
+  </div>
 
-    <a class="ui card" href="./topic02/index.html">
+
+    <div class="ui card">
     <div class="content">
-      <div class="right floated meta"> <i class="sitemap large icon"></i></div>
-      <div class="header"> Tools + Dynamic Web Introduction </div>
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Tools + Dynamic Web Introduction </div>
     </div>
-    <div class="ui bordered rounded image">
-      <img src="./topic02/./talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.gif">
-    </div>
+   <!-- <div class="ui bordered rounded image"> -->
+      <a class="ui card" href="./topic02/index.html">
+        <img class="ui image" src="./topic02/./talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.gif" height="200">
+      </a>
+   <!-- </div>-->
     <div class="content">
       <div class="description">
          <p>The applications to date have been static - essentially a collecting of individual web pages. For more sophisticated web site we need to move to creating web applications. This will require a shift to considering the web site as an aggregating of fragments of web pages, composed and assembled by a program we also write.</p>
       </div>
     </div>
-  </a>
+  </div>
 
-    <a class="ui card" href="./topic03/index.html">
+
+    <div class="ui card">
     <div class="content">
-      <div class="right floated meta"> <i class="sitemap large icon"></i></div>
-      <div class="header"> Starting to Play </div>
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Starting to Play </div>
     </div>
-    <div class="ui bordered rounded image">
-      <img src="./topic03/./talk-1-starting-to-play/b-starting-to-play.png">
-    </div>
+   <!-- <div class="ui bordered rounded image"> -->
+      <a class="ui card" href="./topic03/index.html">
+        <img class="ui image" src="./topic03/./talk-1-starting-to-play/b-starting-to-play.png" height="200">
+      </a>
+   <!-- </div>-->
     <div class="content">
       <div class="description">
          <p>To build a web application we need a web framework. This will define the superstructure of our application and provide essential features to enable us to compose a complicated and efficient web application</p>
       </div>
     </div>
-  </a>
+  </div>
+
+
+    <div class="ui card">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Routes & Actions </div>
+    </div>
+   <!-- <div class="ui bordered rounded image"> -->
+      <a class="ui card" href="./topic04/index.html">
+        <img class="ui image" src="./topic04/./talk-1-exercises/d-exercises.jpg" height="200">
+      </a>
+   <!-- </div>-->
+    <div class="content">
+      <div class="description">
+         <p>The framework structure should now be feeling more familiar. Here we review the major features of the framework again, this time focusing on how the framework delivers the major features of a Web Application.</p>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="ui card">
+    <div class="content">
+        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
+        <div class="header"> Forms & Models </div>
+    </div>
+   <!-- <div class="ui bordered rounded image"> -->
+      <a class="ui card" href="./topic05/index.html">
+        <img class="ui image" src="./topic05/./talk-1/a-review-forms.png" height="200">
+      </a>
+   <!-- </div>-->
+    <div class="content">
+      <div class="description">
+         <p>Forms are the central mechanism for acquiring information from a user - enabling simple strings and numbers to be entered into a page and 'submitted' to an application. The model classes we introduce are saved here and we can subsequently query and update any objects we insert. </p>
+      </div>
+    </div>
+  </div>
+
 
 </div>
 
@@ -149,6 +194,7 @@ figcaption
 $(document).ready(function()
 {
   $("img").addClass ("ui image");
+  $('.ui.embed').embed();
 
   var images = $(".lab img");
   jQuery.each(images, function(i)  {
@@ -161,6 +207,8 @@ $(document).ready(function()
       $(div_label).insertBefore(images[i]);
     }
   });
+
+
 })    </script>
 
   </body>

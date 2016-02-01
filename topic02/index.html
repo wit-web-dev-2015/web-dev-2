@@ -83,35 +83,41 @@ figcaption
 
 
 <div class="ui four doubling stackable cards">
-      <a class="ui card" href="./talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.pdf">
+      <div class="ui card">
     <div class="content">
-      <div class="right floated meta"> <i class="film large icon"></i></div>
-      <div class="header"> Dynamic Web Applications </div>
+        <div class="right floated meta"> <i class="film large icon"></i></div>
+        <div class="header"> Dynamic Web Applications </div>
     </div>
-    <div class="ui bordered rounded image">
-      <img src="./talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.gif">
-    </div>
+   <!-- <div class="ui bordered rounded image"> -->
+      <a class="ui card" href="./talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.pdf">
+        <img class="ui image" src="./talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.gif" height="200">
+      </a>
+   <!-- </div>-->
     <div class="content">
       <div class="description">
          <p>The applications to date have been static - essentially a collecting of individual web pages. For more sophisticated web site we need to move to creating web applications. This will require a shift to considering the web site as an aggregating of fragments of web pages, composed and assembled by a program we also write.</p>
       </div>
     </div>
-  </a>
+  </div>
 
-      <a class="ui card" href="book-tools/index.html">
+
+      <div class="ui card">
     <div class="content">
-      <div class="right floated meta"> <i class="lab large icon"></i></div>
-      <div class="header"> Lab-02 </div>
+        <div class="right floated meta"> <i class="lab large icon"></i></div>
+        <div class="header"> Lab-02 </div>
     </div>
-    <div class="ui bordered rounded image">
-      <img src="./book-tools/img/main.png">
-    </div>
+   <!-- <div class="ui bordered rounded image"> -->
+      <a class="ui card" href="book-tools/index.html">
+        <img class="ui image" src="./book-tools/img/main.png" height="200">
+      </a>
+   <!-- </div>-->
     <div class="content">
       <div class="description">
          <p>Review the spacebook-semantic project from lab 01. Become familiar with the Command Prompt. Install 2 new programming environments: a Web Framework called Play and an Integrated Development Environment called Eclipse.</p>
       </div>
     </div>
-  </a>
+  </div>
+
 
   </div>
    </div>
@@ -133,6 +139,7 @@ figcaption
 $(document).ready(function()
 {
   $("img").addClass ("ui image");
+  $('.ui.embed').embed();
 
   var images = $(".lab img");
   jQuery.each(images, function(i)  {
@@ -145,6 +152,8 @@ $(document).ready(function()
       $(div_label).insertBefore(images[i]);
     }
   });
+
+
 })    </script>
 
   </body>
